@@ -3,7 +3,7 @@
 Agente em LangGraph que recebe um PDF, gera um resumo sob demanda e responde perguntas sobre o conteúdo com citação de página.
 
 <div align="center">
-  <img src="data/screenshot.png" alt="Skimly rodando no terminal" width="600" style="display: block; margin-left: auto; margin-right: auto;">
+  <img src="screenshot.png" alt="Skimly rodando no terminal" width="600" style="display: block; margin-left: auto; margin-right: auto;">
 </div>
 
 ## Como rodar
