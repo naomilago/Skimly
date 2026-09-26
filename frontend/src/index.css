@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-ink: #1a1917;
+  --color-muted: #86807a;
+  --color-border: #e5e0d6;
+  --color-accent: #3654a6;
+  --color-citation-bg: #eaeef6;
+  --color-citation-text: #3654a6;
+  --color-danger: #8a3b2e;
+  --font-display: "Fraunces", serif;
+  --font-sans: "IBM Plex Sans", sans-serif;
+}
+
+.dark {
+  --color-paper: #18171b;
+  --color-surface: #211f24;
+  --color-ink: #f1efe9;
+  --color-muted: #9c968d;
+  --color-border: #34323a;
+  --color-accent: #6e8dda;
+  --color-citation-bg: #253358;
+  --color-citation-text: #aac0ef;
+  --color-danger: #e2917f;
+  color-scheme: dark;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

@@ -20,7 +20,10 @@ def summarize(state: GraphState) -> dict:
     text = '\n\n'.join(doc.page_content for doc in state['raw_text'])
 
     messages = [
-        SystemMessage(content='Você resume documentos de forma clara e objetiva, em português.'),
+        SystemMessage(content=(
+            'Você resume documentos de forma clara e objetiva, em português. '
+            'Ao escrever fórmulas ou notação matemática, sempre use LaTeX delimitado por $ (inline) ou $$ (bloco), nunca texto puro.'
+        )),
         HumanMessage(content=f'Resuma o seguinte texto:\n\n{text}')
     ]
 

@@ -45,7 +45,10 @@ def retrieve_and_answer(state: GraphState) -> dict:
   )
 
   messages = [
-    SystemMessage(content='Responda a pergunta com base apenas no contexto fornecido. Cite a página quando relevante.'),
+    SystemMessage(content=(
+      'Responda a pergunta com base apenas no contexto fornecido. Cite a página quando relevante. '
+      'Ao escrever fórmulas ou notação matemática, sempre use LaTeX delimitado por $ (inline) ou $$ (bloco), nunca texto puro.'
+    )),
     *state.get('messages', []),
     HumanMessage(content=f'Contexto:\n{context}\n\nPergunta: {state['question']}')
   ]
